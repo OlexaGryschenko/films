@@ -1,4 +1,15 @@
-const numberOfFilms = +prompt('Сколько фильмов ви уже просмотрели', '');
+let  numberOfFilms; //глобально обявленная перемeнная, ее можно менять в зависимости от ввода
+
+function start (){
+    numberOfFilms = +prompt('Сколько фильмов ви уже просмотрели', '');
+while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+    numberOfFilms = +prompt('Сколько фильмов ви уже просмотрели', '');
+}
+
+}
+start();
+
+
 const personalMovieDB = {
 count: numberOfFilms,
 movies: {},
@@ -33,3 +44,5 @@ else {
     console.log("Mistake");
 }
 console.log(personalMovieDB);
+
+
